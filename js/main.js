@@ -21,3 +21,4 @@ const scrollupBtn = document.querySelector('.scrollup');
 scrollupBtn.addEventListener('click', () =>{
     window.scrollTop(0, 0);
 });
+

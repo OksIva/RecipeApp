@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Przepisy kulinarne</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
   <!-- CSS only -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -17,7 +18,7 @@
     <div class="container">
       <div class="logo">
         <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-          <img src="../app/images/logo.png" alt="Przepisy">
+          <img src="../app/images/logo/Logo-transparent.png" alt="Przepisy">
          </a>
       </div>
       <!--boostrap top navigation-->
@@ -31,7 +32,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="topbar-link active" href="#">
+                <a class="topbar-link active" href="../app/signUp.html">
                   <i class="fa fa-user"><span class="login-btn"> Załoguj się</span></i>
                 </a>
               </li>
@@ -136,93 +137,74 @@
     </div>
   </div>
   <!--recipe categories-->
-  <div class="main-category pad-top-100 pad-bottom-100 parallax">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-            <h2 class="block-title text-center">Przepisy</h2>
-          </div>
-          <div class="box-container">
-            <div class="row row-cols-3">
-              <div class="category-box">
+  <div class="main-category">
+    <h2 class="block-title">Przepisy</h2>
+        <div class="box-container">
+            <div class="category-box">
                 <div class="box-img">
-                    <a href="#"><img src="../app/images/category/soup.jpg" alt=""></a>
-                  </div>
-                  <div class="text-col">
+                    <a href="#"><img src="../app/images/category/soup.jpg" alt="Zupy">
                       <h3>Zupy</h3>
+                    </a>
                   </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                    <a href="#"><img src="../app/images/category/meat.jpg" alt=""></a>
-                  </div>
-                  <div class="text-col">
-                      <h3>Dania mięsne</h3>
-                  </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/fish.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Dania rybne</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/pasta.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Makaron</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/salad.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Sałatki</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/starter.png" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Przekąski</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/wege.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Dania wege</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/desert.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Desery</h3>
-                </div>
-              </div>
-              <div class="category-box">
-                <div class="box-img">
-                  <a href="#"><img src="../app/images/category/drink.jpg" alt=""></a>
-                </div>
-                <div class="text-col">
-                    <h3>Napoje</h3>
-                </div>
-              </div>
             </div>
-          </div>
-          <!--end boc-container-->
-        </div>
-      </div>
-    </div><!-- end container -->
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/meat.jpg" alt="Dania mięsne">
+                        <h3 class="box-name">Dania mięsne</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/fish.jpg" alt="Dania Rybne">
+                        <h3 class="box-name">Dania rybne</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/pasta.jpg" alt="Pasta">
+                        <h3 class="box-name">Makaron</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/salad.jpg" alt="Sałatka">
+                        <h3 class="box-name">Sałatki</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/starter.png" alt="Przekąska">
+                        <h3 class="box-name">Przekąski</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/wege.jpg" alt="Danie wege">
+                        <h3 class="box-name">Dania wege</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/desert.jpg" alt="Deser">
+                        <h3 class="box-name">Desery</h3>
+                    </a>
+                  </div>
+            </div>
+            <div class="category-box">
+                <div class="box-img">
+                    <a href="#"><img src="../app/images/category/drink.jpg" alt="Napój">
+                        <h3 class="box-name">Napoje</h3>
+                    </a>
+                  </div>
+            </div>
+                                            
+        </div>  
   </div><!-- end recipe category -->
   <!--NEWSLETTER-->
   <div class="footer-news pad-top-100 pad-bottom-70 parallax">
@@ -245,7 +227,7 @@
   <div class="footer-main">
     <div class="container">
       <div class="footer-logo">
-        <img src="../app/images/logo.png" class=" mx-auto" alt="...">
+        <img src="../app/images/logo/Logo-transparent.png" class=" mx-auto" alt="Logo">
       </div>
       <div class="row row-cols-2">
         <div class="col">
