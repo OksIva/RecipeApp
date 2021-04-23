@@ -4,18 +4,25 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.banner {
+.signup-banner {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/signup-bg.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
+    display: flex;
+    flex-direction: column;
 }
-
+.topbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
 .form-box {
     align-self: center;
-    width: 500px;
+    max-width: 500px;
     height: 550px;
     position: relative;
     margin: 3% auto;
@@ -225,27 +232,5 @@ button {
 
     bottom: 10px; 
 }
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fefefe;
-    z-index: 9999;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.loader.hidden{
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeOut{
-    100%{
-        opacity: 0;
-         visibility: hidden;
-    }
-}
+
 

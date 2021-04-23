@@ -5,15 +5,16 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::after,*::before{-w
 @import url(../scss/_reset.scss);
 @import url(../scss/_global.scss);
 @font-face {
-    font-family: 'nautilus_pompiliusregular';
-    src: url('../fonts/Nautilus.otf') format('woff2'),
-         url('../fonts/Nautilus.otf') format('woff');
+    font-family: 'FatinGengky';
+    src: url('../fonts/FatinGengky/FatinGengky-Regular.otf') format('woff2'),
+         url('../fonts/FatinGengky/FatinGengky-Italic.otf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body{
 	color:#686868;
+    font-family:'Engebrechtre',serif;
 	font-size:14px;
 }
 
@@ -137,6 +138,7 @@ html, body{ height: 100%; }
     right:40px;
     background:url(../images/up-icon1.png) no-repeat;
 }
+
 .scrollup:hover{
 	opacity:1;
 }
@@ -144,121 +146,52 @@ html, body{ height: 100%; }
     HEADER AREA
 -------------------------------------------------------------------*/
 
-.logo{
-    float:left;
-    height: 90px;
-    width: 170px;
+@media screen and (max-width: 720px){
+    .logo{
+        display: none;
+    }
+    .search{
+        margin-left: 65px;
+        
+    }
+    
 }
-.logo img{
-    height: 100%;
-    width: 100%;
-}
-.header-block-top{
+.header{
     position: absolute;
     z-index: 11;
     width: 100%;
     top: 0;
     left: 0;
+    transition: all 1s;
 }
-.navbar {
-    padding: 43px 0px 15px;
-	margin: 0 14px;
-	color: #fff;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
-	position:relative;
-	-webkit-transition: color 0.4s;
-    transition: color 0.4s;
-    font-weight: 500;
-    font-size: 14px;
+.header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    background:linear-gradient( rgb(0, 0, 0),rgba(0, 0, 0, 0.74));
+    height: 80px;
 }
-.nav-item{
-    font-family: 'nautilus_pompiliusregular';
-    letter-spacing: 1px;
-    margin-left: 25px;
-}
-.nav-item :hover{
-    color: white;
-    opacity: .9;
-}
-.nav-item a{
-    color: white;
-    font-size: 18px;
-    position: relative;
+.header-container{
     display: flex;
-    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.nav-item a::after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color:orange;
-    position: absolute;
-    transform: scaleX(0);
-    transition: transform 0.5s;
+.logo{
+    height: 100px;
+    margin-left: 85px;
 }
-.nav-item a::after {
-    bottom: 0;
-    transform-origin: center;
-}
-.nav-item a:hover::after {
-    transform: scaleX(1);
-}
-
-/*------------------------------------------------------------------
-    BANER
--------------------------------------------------------------------*/
-
-.banner{
-	background:url(../images/baner-bg.jpg) no-repeat center top;
-	background-attachment:fixed;
-	background-size:cover;
-	height:100vh;
-	min-height:100%;
-}
-.banner .container, .banner .banner-static, .banner .col-lg-12 {
+.logo img{
     height: 100%;
+    width: auto;
 }
-.banner-text {
-    display: table;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-.banner-cell {
-    display: table-cell;
-    vertical-align: middle;
-    color: #fff;
-}
-.banner-text h1 {
-	font-family: 'nautilus_pompiliusregular';
-    letter-spacing: 2.7px;
-    position: relative;
-    display: inline-block;
-	font-size: 80px;
-    line-height: 100px;
-    color: #f6ac26;
-	padding-bottom: 5px;
-	padding-top:20px;
-}
-
-.banner-text h2 {
-    font-family: 'Roboto', sans-serif;
-    color: #d1b183;
-    letter-spacing: 2.7px;
-    position: relative;
-    font-size: 37px;
-    line-height: 100px;
-    padding-bottom:25px;
-}
-.banner-text p{
-    font-family: 'Roboto', sans-serif;
-    font-size:18px;
-    color:#ccc;
-    padding-bottom:35px;
-    margin:0px;
+.search{
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+    min-width: 80px;
+    padding: 20px 15px;
 }
 /*------------------------------------------------------------------
   MENU HAMBURGER
@@ -266,8 +199,8 @@ html, body{ height: 100%; }
 .main-menu{
     width: 300px;
     height: 100%;
-    background-color: rgba(245, 231, 205, 0.603);
-    top: 70px;
+    background:linear-gradient(rgba(0, 0, 0, 0.74), rgba(70, 70, 70, 0.74));
+    top: 80px;
     left: -100%;
     position: fixed;
     display: flex;
@@ -281,11 +214,11 @@ html, body{ height: 100%; }
     left: 0;
 }
 .main-menu-button {
-    height: 40px;
-    width: 50px;
+    height: 30px;
+    width: 40px;
     position: fixed;
-    top: 100px;
-    left: 20px;
+    top: 25px;
+    left: 15px;
     cursor: pointer;
     display: flex;
     z-index: 20;
@@ -299,13 +232,13 @@ html, body{ height: 100%; }
     transition: all 1.2s;
 }
 .active .line-1 {
-    transform: rotateZ(-45deg) translate(-8px, 10px);
+    transform: rotateZ(-45deg) translate(-8px, 6px);
 }
 .active .line-2 {
     opacity: 0;
 }
 .active .line-3 {
-    transform: rotateZ(45deg) translate(-8px, -10px);
+    transform: rotateZ(45deg) translate(-8px, -6px);
 }
 .active :hover .line-1,
 .active :hover .line-3{
@@ -318,19 +251,19 @@ html, body{ height: 100%; }
     margin: 5px;
     width: max-content;
 }
-.nav-link{
-    font-family:'Engebrechtre',serif;
-    color: black;
-    font-size: 25px;
+.nav-link{ 
+    font-family: 'FatinGengky'; 
+    font-size: 22px;
+    color: white;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     opacity: 0.8;
     text-transform: uppercase;
     padding: 10px 0;
     position: relative;
 }
 .nav-link:hover{
-    color:rgb(0, 0, 0);
+    color:white;
     opacity: 1;
 }
 .nav-link::before,
@@ -355,20 +288,65 @@ html, body{ height: 100%; }
     transform: scaleX(1);
 }
 /*------------------------------------------------------------------
+    BANER
+-------------------------------------------------------------------*/
+
+.banner{
+    background:url(../images/baner-bg.jpg) no-repeat center top;
+    background-attachment:fixed;
+    background-size:cover;
+    height:100vh;
+    min-height:100%;
+    display: flex;
+}
+.banner-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+.banner-text h1{
+    text-align: center;
+    font-family: 'FatinGengky';
+    letter-spacing: 1px;
+    font-size: 50px;
+    color: #f6ac26;
+}
+.banner-text h2{
+    text-align: center;
+    color: palegoldenrod;
+}
+.banner-text p{
+    text-align: center;
+    font-size: 16px;
+    color: wheat;
+}
+
+/*------------------------------------------------------------------
   CAROUSEL
 -------------------------------------------------------------------*/
 .special-menu {
     background-color: #e6e6e6 ;
-    padding-top: 70px;
-    padding-bottom: 55px;   
+    padding: 15px 10px;   
     position: relative;
 
 }
-.block-title {
-    font-size:52px;
-    font-family: 'nautilus_pompiliusregular';
+.carousel-title {
+    font-family: 'FatinGengky';
+    font-size: 35px;
     font-style: italic;
-    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 15px;
     color: #ffb108;
 }
 .rounded {
@@ -394,9 +372,10 @@ html, body{ height: 100%; }
     text-align: center;
     padding:  30px;
     font-size: 50px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-family: 'nautilus_pompiliusregular';
+    font-style: italic;
+    font-family: 'FatinGengky';
     color: orange;
 }
 .box-container{    
@@ -428,7 +407,7 @@ html, body{ height: 100%; }
     width: 100%;
     height: max-content;
     color: black;
-    font-family:'Engebrechtre',serif;
+    font-family:'FatinGengky';
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
@@ -469,10 +448,11 @@ html, body{ height: 100%; }
 }
 
 .news-title {
-    letter-spacing: 0.96px;
+    letter-spacing: 1px;
     margin-bottom: 22px;
-    font-family: 'nautilus_pompiliusregular';
-    font-size: 52px;
+    font-family: 'FatinGengky';
+    font-size: 42px;
+    font-style: italic;
     color: #ffb108;
     text-align: center;
 }
@@ -480,7 +460,6 @@ html, body{ height: 100%; }
 .footer-news p {
     margin-bottom: 40px;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
     text-align:center;
 }
 
@@ -531,19 +510,33 @@ html, body{ height: 100%; }
     background-attachment:fixed;
 	background-size:cover;
 	position:relative;
-    background-image: url(../images/footer-bg.png);
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/footer-bg.png);
     width: 100%;
-    padding-top: 30px;
-    text-align: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;      
 }
 .footer-logo{
-    height: auto;
+    height: 170px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-logo img{ 
+   height: 100%;
+   width: auto;
 }
 .socials-box {
+    width: 600px;
+    height: max-content;
+    padding: 10px;
+    margin: 0 20px;
     opacity: 1;
-    margin-top: 20px;
-    padding: 5px;
 }
 .social-circle-border {
     font-size: 30px;
@@ -559,8 +552,10 @@ html, body{ height: 100%; }
 
 .socials-box h3{
     color: #ffb108;
-    font-size: 40px;
-    font-family: 'nautilus_pompiliusregular';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-family: 'FatinGengky';
 }
 .socials-box a :hover{
     color:orange;
@@ -574,17 +569,21 @@ html, body{ height: 100%; }
     color: white;
 }
 .socials-box li{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 .copy-title{
     color: white;
-    text-align: center;
     font-size: 14px;
     letter-spacing: 1px;
+    text-align: center;
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+/*------------------------------------------------------------------
+    FOOTER END
+-------------------------------------------------------------------*/
 
 
 

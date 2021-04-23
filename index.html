@@ -14,61 +14,17 @@
 </head>
 
 <body>
-  <header class="header-block-top">
-    <div class="container">
-      <div class="logo">
-        <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-          <img src="../app/images/logo/Logo-transparent.png" alt="Przepisy">
-         </a>
-      </div>
-      <!--boostrap top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="topbar-link active" aria-current="page" href="#">
-                  <i class="fa fa-home"><span class="home-btn"> Strona główna</span></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="topbar-link active" href="../app/signUp.html">
-                  <i class="fa fa-user"><span class="login-btn"> Załoguj się</span></i>
-                </a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Szukaj przepis" aria-label="Szukaj">
-              <button class="btn btn-outline-warning" type="submit">Szukaj</button>
-            </form>
-          </div>
-        </div>
-      </nav><!-- end top navigation -->
-    </div>
-  </header><!--HEADER END-->
-  <div class="banner banner full-screen-mode parallax">
-    <div class="container pr">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="banner-static">
-          <div class="banner-text">
-            <div class="banner-cell">
-              <h1>GOTUJ Z NAMI <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Smacznie:Zdrowo:Szybko" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
-              <h2>Tylko najlepsze przepisy</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--main menu hamburger-->
-    <nav class="main-menu">
+  <header class="header">
+    <div class="header-container">
+      <!--main menu hamburger-->
+      <nav class="main-menu">
         <div class="main-menu-button">
           <div class="line line-1"></div>
           <div class="line line-2"></div>
           <div class="line line-3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="" class="nav-link">Zupy</a></li>
+            <li><a href="" class="nav-link">Zupy</a></li>
             <li><a href="" class="nav-link">Dania mięsne</a></li>
             <li><a href="" class="nav-link">Dania rybne</a></li>
             <li><a href="" class="nav-link">Makaron</a></li>
@@ -76,15 +32,39 @@
             <li><a href="" class="nav-link">Przekąski</a></li>
             <li><a href="" class="nav-link">Desery</a></li>
             <li><a href="" class="nav-link">Napoje</a></li>
+            <li>
+              <a class="nav-link" href="../app/signUp.html">
+                <i class="fa fa-user"> Załoguj się</i>
+              </a>
+            </li>
         </ul>
         <div class="main_menu_overlay"></div>
-    </nav>
-    <!--end main menu-->
+      </nav><!--end main menu-->
+      <div class="logo">
+        <a href="index.html">
+          <img src="../app/images/logo/Logo-transparent.png" alt="Przepisy">
+         </a>
+      </div>
+      <!--top navigation-->
+      <form class="search">
+        <input class="form-control me-2" type="search" placeholder="Szukaj przepis" aria-label="Szukaj">
+        <button class="btn btn-outline-warning" type="submit">Szukaj</button>
+      </form>
+    </div>
+  </header><!--HEADER END-->
+  <div class="banner">
+    <div class="banner-container">
+      <div class="banner-text">
+        <h1>GOTUJ Z NAMI </h1>
+          <h2>Tylko najlepsze przepisy</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod</p>
+      </div>
+    </div>
   </div><!--BANNER END-->
    <!--most popular recipe carousel-->
    <div class="special-menu pad-top-100 parallax">
     <div class="container-fluid">
-      <h2 class="block-title text-center"> Najbardziej popularne </h2>
+      <h2 class="carousel-title">Najbardziej popularne</h2>
       <div class="row justify-content-md-center">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -191,7 +171,7 @@
             </div>
             <div class="category-box">
                 <div class="box-img">
-                    <a href="#"><img src="../app/images/category/desert.jpg" alt="Deser">
+                    <a href="#"><img src="../app/images/category/dessert.jpg" alt="Deser">
                         <h3 class="box-name">Desery</h3>
                     </a>
                   </div>
@@ -224,52 +204,40 @@
     </div>
   </div> <!-- END NEWSLETTER -->
   <!--FOOTER-->
-  <div class="footer-main">
-    <div class="container">
-      <div class="footer-logo">
-        <img src="../app/images/logo/Logo-transparent.png" class=" mx-auto" alt="Logo">
-      </div>
-      <div class="row row-cols-2">
-        <div class="col">
-          <div class="socials-box">
-            <h3>Obserwuj</h3>
-            <a class="social-circle-border" href="#"><i class="fa fa-facebook"></i>
+  <div class="footer-main"> 
+    <div class="footer-logo">
+      <img src="../app/images/logo/Logo-transparent.png" alt="Logo">
+    </div>   
+    <div class="box-container">
+      <div class="socials-box">
+        <h3>Obserwuj</h3>
+          <a class="social-circle-border" href="#"><i class="fa fa-facebook"></i>
+          </a>
+          <a class="social-circle-border" href="#"><i class="fa fa-twitter"></i>
+          </a>
+          <a class="social-circle-border" href="#"><i class="fa fa-instagram"></i>
+          </a>
+          <a class="social-circle-border" href="#"><i class="fa fa-pinterest"></i>
+          </a>
+      </div>      
+      <div class="socials-box">
+        <h3>Kontakt</h3>
+        <u>
+          <li>
+            <a href="tel:+48222111333">
+              <i class="fa fa-mobile"> +48 222 111 333</i>
             </a>
-            <a class="social-circle-border" href="#"><i class="fa fa-twitter"></i>
+          </li>
+          <li>
+            <a href="mailto:support@cookbook.com">
+              <i class="fa fa-envelope"> support@cookbook.com</i>
             </a>
-            <a class="social-circle-border" href="#"><i class="fa fa-instagram"></i>
-            </a>
-            <a class="social-circle-border" href="#"><i class="fa fa-pinterest"></i>
-            </a>
-        </div>
-        </div>
-        <div class="col">
-          <div class="socials-box">
-            <h3>Kontakt</h3>
-            <u>
-              <li>
-                <a href="tel:+48222111333">
-                  <i class="fa fa-mobile"> +48 222 111 333</i>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:support@cookbook.com">
-                  <i class="fa fa-envelope"> support@cookbook.com</i>
-                </a>
-              </li>
-            </u>
-          </div>
-        </div>
+          </li>
+        </u>
       </div>
     </div>
-    <div id="copyright" class="copyright-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h6 class="copy-title"> Copyright &copy; 2021 CookBook Online <a href="#" target="_blank"></a> </h6>
-                </div>
-            </div>
-        </div>
+    <div class="copyright-main">
+      <h6 class="copy-title"> Copyright &copy; 2021 CookBook Online <a href="#" target="_blank"></a> </h6>
     </div>
   </div> <!--END FOOTER MAIN-->
   <div class="loader">
